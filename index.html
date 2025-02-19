@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedBus-Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+    color: #4a4a4a;
+    height: 100%;
+    overflow-y: scroll;
+    word-break: break-word;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    display: block;
+}
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 100px;
+    margin-left: 36.667px;   
+    margin-right: 36.667px; 
+    position: relative;
+}
+.logo{
+    margin-top: 25px;
+    cursor: pointer;
+}
+.rb1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-top: 17px;
+}
+.rb2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+.rb2 :hover{
+    background-color: rgb(231, 231, 231);
+}
+.busnavigator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 104px ;
+    height: 72.67px;
+    background-color: #D84E55;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.railnavigator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 104px ;
+    height: 72.67px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 40px;
+    margin-left: 570px;
+}
+.links :hover{
+    color: #D84E55;
+}
+.help, .language, .account{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    cursor: pointer;
+}
+
+.background {
+    background-image: url('images/Tags/banner.webp');
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 520px; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.section1 {
+    position: relative; 
+    height: 520px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading1{
+    color: white;
+    font-size: 32px;
+    font-weight: light;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.searchbus{
+    display: flex;
+    flex-direction: row;
+    width: 1263;
+    height: 104px;
+    cursor: pointer;
+    margin-top: 80px;
+}
+.from, .to, .date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 310.88px ;
+    height: 104px;
+    background-color: white;
+    border-right: solid black 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    color: gray;
+}
+.from{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+button{
+    background-color: #D84E55;
+    border: none;
+    height: 104px;
+    width: 186.88px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+.search :hover{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2)
+}
+#input{
+    border: none;
+    background-color: transparent;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gray;
+    font-weight: bold;
+    font-size: 20px;
+}
+.section2{
+    height: fit-content;
+    padding: 2rem;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    border-radius: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: -50px;
+    width:90%;
+    justify-self: center;
+}
+.txt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.offers{
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.button{
+    color: rgb(16, 52, 217);
+    font-weight: 600;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 10px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.coupans {
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scrollbar-width: thin;
+}
+.coupans::-webkit-scrollbar {
+    height: 8px;
+}
+.coupans::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px;
+}
+.coupans::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.offer {
+    flex: 0 0 auto;
+    width: 300px; 
+    margin-right: 20px; 
+}
+.one{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(12, 57, 139) -6.92%, rgb(62, 118, 216) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.BUS{
+    width: 41.94px;
+    height: 20px;
+    background-color: #FFFFFF33;
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    text-align: center;
+}
+.txtmain{
+    width: 180px;
+    color:white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.valid{
+    width: 180px;
+    height: 16px;
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+.lst{
+    display: flex;
+    flex-direction: row;
+}
+.part2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.code{
+    width: 100px;
+    height: 24px;
+    color: white;
+    border: dashed white 2px;
+    background-color: #FFFFFF33;
+    padding: 4px 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+.two{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(39, 57, 101) -6.92%, rgb(80, 210, 149) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.coupans{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    scrollbar-width: none;
+}
+.three{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(72, 0, 4) -6.92%, rgb(216, 78, 85) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.four{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(14, 113, 67) -6.92%, rgb(115, 236, 179) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.five{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(24, 125, 151) -6.92%, rgb(109, 213, 237) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.six{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(206, 119, 0) -6.92%, rgb(255, 194, 111) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.seven{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(134, 0, 62) -6.92%, rgb(210, 81, 141) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.eight{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(60, 16, 83) -6.92%, rgb(173, 83, 137) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.nine{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(63, 43, 150) -6.92%, rgb(168, 192, 255) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.ten{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(12, 57, 139) -6.92%, rgb(62, 118, 216) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.eleven{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(72, 0, 4) -6.92%, rgb(216, 78, 85) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.twelve{
+    display: flex;
+    width: 300px;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(71.04deg, rgb(12, 57, 139) -6.92%, rgb(62, 118, 216) 109.43%);
+    padding: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+    align-items: center;
+}
+.section3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+    padding: 2rem;
+}
+.statebus {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: fit-content;
+    padding: 2rem;
+    position: relative;
+    box-shadow: inset 10px;
+    width: 100%;
+    justify-self: center;
+}
+.statebus {
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scrollbar-width: none; /* For Firefox */
+}
+.statebus::-webkit-scrollbar {
+    height: 8px; /* Customize the scrollbar for Webkit browsers */
+}
+.statebus::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px;
+}
+.statebus::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.state1{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAE9EA;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    cursor: pointer;
+}
+.box1{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-bottom: solid 1px black;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    width:480 ;
+    padding: 16px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    align-items: center;
+
+}
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.english{
+    width: 82.54;
+    color: #1d1d1d;
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.lang{
+    width: 263.53;
+    height: 28;
+    color: #6f6f66;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 4px 0px 0px;
+    padding: 2px;
+    margin-top: -30px;
+}
+.box2{
+    width: 480;
+    height: 72;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.maintxt2{
+    width: 320;
+    height: 40;
+    color: #4a4a4a;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px 64px;
+}
+.off{
+    display: flex;
+    flex-direction: row;
+    background-color:#F2F2F8 ;
+    justify-content: center;
+    border-radius: 5px;
+    width: 350px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.box3{
+    background-color: #FAE9EA;
+    color: black;
+    font-weight: bolder;
+    width: 480;
+    height: 22px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 25px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+}
+.section4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.heading2{
+    width: 552;
+    height: 180;
+    color: #1d1d1d;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: light;
+    color: rgb(54, 53, 53);
+}
+strong{
+
+    font-weight: bolder;
+    color: black;
+}
+.tt{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 224;
+    height: 56;
+    cursor: pointer;
+}
+.tttxt{
+    width: 130;
+    height: 24;
+    color: #D84E55;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+.styled-line {
+    border: none;         
+    border-top: 4px solid #D84E55;
+    width: 30%;    
+    margin-top: -5px;
+    margin-left: -1px;       
+        
+}
+.bold1, .bold2, .bold3{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+}
+.normaltxt{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin: 0px 0px 24px;
+
+}
+.boldtxt{
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.buttontt{
+    background-color: #D84E55;
+    width: 200px;
+    height: 54px;
+    color: white;
+    margin: 32px 0px 0px;
+    padding: 14.4px 16px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.right{
+    background-image: url(images/rail/aboutUsImg.svg);
+    background-repeat: no-repeat;
+}
+.section5{
+    background-image: url(images/rail/appInstallbg.svg);
+    background-repeat: no-repeat;
+    width: 1031.33;
+    height: 442.79px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    gap: 100px;
+    margin-top: 100px;
+}
+.heading3{
+    color: white;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+    font-weight: light;
+}
+.what{
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    margin-left: 20px;
+    
+}
+.what1{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.what2{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    justify-self: center;
+    margin-top: 30px;
+}
+.scanner{
+    margin-top: 150px;
+}
+.download{
+    margin-top: 150px;
+}
+.scantxt{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.downtxt{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.play, .app{
+    cursor: pointer;
+}
+.count{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.rate{
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.user{
+    color: black;
+    font-weight: lighter;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.where{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+.section6{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.right2{
+    background-color: #222F57;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 30px;
+    margin-left: -100px;
+    justify-content: space-evenly;
+}
+.point1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+.txt2{
+    display: flex;
+    flex-direction: column;
+}
+.dark{
+    color: white;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.light{
+    color: white;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.section7{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+.heading4{
+    color: black;
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: light;
+}
+.contries{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.contries :hover{
+    color: #D84E55;
+}
+.section8{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+.heading5{
+    color: black;
+    font-size: 32px;
+    font-weight: light;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.txt4{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: light;
+    font-size: 20px;
+
+}
+strong{
+    color: blue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+.section9{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 30px;
+    margin-top: 150px;
+
+}
+.heading6{
+    color: black;
+    font-size: 32px;
+    font-weight: light;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.txt5{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: light;
+    font-size: 20px;
+}
+.box4{
+    display: flex;
+    flex-direction: row;
+    border: solid gray 1px;
+    border-radius: 20px;
+    align-items: center;
+    height: 150px;
+    gap: 50px;
+}
+.txt6{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.heading7{
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: light;
+}
+.numbers{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.first, .second, .third{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    color: black;
+}
+
+.red{
+    color:#D84E55;
+}
+.button2{
+    background-color: #D84E55;
+    border: none;
+    height: 75px;
+    width: 186.88px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.section10{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+.heading8{
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: light;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navigators{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    cursor: pointer;
+}
+.navigators :hover{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #D84E55;
+}
+.general{
+    color:#D84E55;
+    border-bottom: #D84E55 solid 3px;
+    height: 30px;
+}
+.questions{
+    color:black;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.Q1{
+    height: 50px;
+    border: solid gray 1px;
+    border-radius: 10px;
+    align-content: center;
+    width:1100px;
+    text-align: left;
+    cursor: pointer;
+}
+.navbar{
+position: relative;
+left: 330px;
+}
+.section5{
+    background-color: #C45B5B;
+    width: 1012px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 415px;
+    margin-bottom: 70px;
+}
+</style>
+
+<body>
+   
+    <nav class="navbar" >
+        <div class="logo"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="48" width="80"></div>
+        <div class="rb1">
+            <div class="busnavigator">
+                <div class="logo2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/white.png?raw=true" alt="" height="20" width="30"></div>
+                <div class="text">Bus Tickets</div>
+            </div>
+        </div>
+        <div class="rb2">
+            <div class="railnavigator">
+                <div class="logo2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/rail_vertical.png?raw=true" alt=""></div>
+                <div class="text">Train Tickets</div>
+            </div>
+        </div>
+        <div class="links">
+            <div class="help">
+                <div class="img"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/headphone-alt-svgrepo-com.svg?raw=true" alt="" height="22" width="22"></div>
+                <div class="txt">Help</div>
+            </div>
+            <div class="language">
+                <div class="img"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/language-svgrepo-com.svg?raw=true" alt="" height="22" width="22"></div>
+                <div class="txt">language</div>
+            </div>
+            <div class="account">
+                <div class="img"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/user-alt-1-svgrepo-com.svg?raw=true" alt="" height="22" width="22"></div>
+                <div class="txt">Account</div>
+            </div>
+        </div>
+    </nav>
+    <div class="section1">
+        <div class="background"><img src="https://raw.githubusercontent.com/Dev2139/RedBus-clone/refs/heads/main/images/Tags/banner.webp?raw=true" alt="" width="100%" height="520"></div>
+        <div class="heading1"><h3>India's No. 1 Online Bus Ticket Booking Site</h3></div>
+        <div class="searchbus">
+            <div class="from">
+                <div class="img2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/bus-svgrepo-com.svg?raw=true" alt="" height="30" width="30"></div>
+                <div class="txt2"> <input type="text" name="" placeholder="FROM" id="input"></div>
+            </div>
+            <div class="swapper"></div>
+            <div class="to">
+                <div class="img2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/bus-svgrepo-com.svg?raw=true" alt="" height="30" width="30"></div>
+                <div class="txt2"><input type="text" name="" placeholder="TO" id="input"></div>
+            </div>
+            <div class="date">
+                <div class="img2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/calender-svgrepo-com.svg?raw=true" alt="" height="30" width="30"></div>
+                <div class="txt2"><input type="date" name="" id="input"></div>
+            </div>
+            <div class="searchbutton">
+                <div class="search"><button><h3>Search Buses</h3></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="txt">
+            <div class="offers">TRENDING OFFERS</div>
+            <div class="button">View All</div>
+        </div>
+        <div class="coupans" id="coupans">
+            <div class="offer one">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/4.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 350 on <br>bus tickets.</div>
+                <div class="valid">Valid till 27 Oct</div>
+                <div class="lst">
+                    <div class="code">DIWALI350</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer two">
+                <div class="part1"><div class="tag"><img src="" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 300 on<br>bus tickets</div>
+                <div class="valid">Valid till 01 Nov</div>
+                <div class="lst">
+                    <div class="code">BUS300</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer three">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/9.png?raw=true" alt=""></div></div>
+                <div class="part2">
+                    <div class="BUS">BUS</div>
+                    <div class="txtmain">Save up to Rs 300 on <br>AP, TS routes</div>
+                    <div class="valid">Valid till 01 Nov</div>
+                    <div class="lst">
+                        <div class="code">SUPERHIT</div>
+                        <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="offer four">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/6.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 200 on <br>Primo operators.</div>
+                <div class="valid">Valid till 31 Oct</div>
+                <div class="lst">
+                    <div class="code">PRIMO200</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer five">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/7.png" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 500 on <br>with ICICI.</div>
+                <div class="valid">Valid till 25 Oct</div>
+                <div class="lst">
+                    <div class="code">ICICI500</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer six">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/3.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 300 on <br>Charted Bus.</div>
+                <div class="valid">Valid till 01 Nov</div>
+                <div class="lst">
+                    <div class="code">CHARTED15</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer seven">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/8.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save 25% up to Rs<br>100 on SBSTC bus</div>
+                <div class="valid">Valid till 01 Nov</div>
+                <div class="lst">
+                    <div class="code">SBNEW</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer eight">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/RAJKOT30080X80.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 300 on <br>routes from RAJKOT.</div>
+                <div class="valid">Valid till 01 Jan</div>
+                <div class="lst">
+                    <div class="code">RAJKOT300</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer nine">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/SURAT300-80X80.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 300 on <br>routes from SURAT.</div>
+                <div class="valid">Valid till 01 Jan</div>
+                <div class="lst">
+                    <div class="code">SURAT300</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer ten">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/5.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 50 on <br>IntrCity SmartBus.</div>
+                <div class="valid">Valid till 31 Oct</div>
+                <div class="lst">
+                    <div class="code">SMARTBUS50</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer eleven">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/1.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 100 on<br>Kallada Travels <br>.</div>
+                <div class="valid">Valid till 31 Oct</div>
+                <div class="lst">
+                    <div class="code">KRS100</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            <div class="offer twelve">
+                <div class="part1"><div class="tag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/2.png?raw=true" alt=""></div></div>
+                <div class="part2"><div class="BUS">BUS</div>
+                <div class="txtmain">Save up to Rs 250 on <br>bus tickets.</div>
+                <div class="valid">Valid till 01 Nov</div>
+                <div class="lst">
+                    <div class="code">FIRST</div>
+                    <div class="copy"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/copy-svgrepo-com.svg?raw=true" alt="" height="22"></div>
+                </div></div>
+            </div>
+            Add more offers here, maintaining the same structure
+         </div>
+    </div>
+    <div class="section3">
+        <div class="txt">
+            <div class="offers">GOVERNMENT BUSES</div>
+            <div class="button">View All</div>
+        </div>
+        <div class="statebus">
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/16426%20(1).png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>RSRTC</h3></div>
+                        <div class="lang">राजस्थान स्टेट रोड ट्रांसपोर्ट कॉर्पोरशन</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">6000 services includig Deluxe,<br>Ordinary and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of RSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/16426%20(1).png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>WBTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">120 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of WBTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/16374.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>SBSTC</h3></div>
+                        <div class="lang">দক্ষিণবঙ্গ রাষ্ট্রীয় পরিবহণ সংস্থা</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">480 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of SBSTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/15443.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>WBSTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of WBSTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/16227.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>HRTC</h3></div>
+                        <div class="lang">हिमाचल रोड ट्रान्सपोर्ट कॉर्पोरेशन</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">480 services including Himgaurav,<br>Himmani and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of HRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/11060.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>PEPSU</h3></div>
+                        <div class="lang">ਪੈਪਸੂ ਰੋਡ ਟਰਾਂਸਪੋਰਟ ਕਾਰਪੋਰੇਸ਼ਨ</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">100 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of PEPSU</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/10283.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>APSRTC</h3></div>
+                        <div class="lang">ఆంధ్రప్రదేశ్ రాష్ట్ర రోడ్డు రవాణా సంస్థ</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">1539 services including Garuda, Garuda<br>Plus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of APSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/18491.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>TGSRTC</h3></div>
+                        <div class="lang">తెలంగాణ రాష్ట్ర రోడ్డు రవాణా</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">1450 services including Garuda Plus,<br>Rajdhani and morE</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of TGSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/24978.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>KERALA RTC</h3></div>
+                        <div class="lang">കേരള സ്റ്റേറ്റ് റോഡ് ട്രാൻസ്പോർട്ട് കോർപ്പറേഷൻ</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">940 services including Swift, AC<br>Multiaxle and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of KSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/25187.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>KAAC Transport</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of KAAC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/16081.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>ASTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of ASTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/7115.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>KTCL</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of KTCL</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/24978.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>NSBSTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of NSBSTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/11044.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>UPSRTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of UPSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/27455.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>CTURTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of CTURTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/29176.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>JKSRTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of JKSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            <div class="state1">
+                <div class="box1">
+                    <div class="statelg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/state/17889.png?raw=true" alt="" height="50"></div>
+                    <div class="name">
+                        <div class="english"><h3>BSRTC</h3></div>
+                        <div class="lang">পশ্চিমবঙ্গ রাষ্ট্রীয় পরিবহণ নিগম</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="maintxt2">20 services including Volvo Bus, AC &<br>Non AC Bus and more</div>
+                    <div class="off">
+                        <div class="lg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="16" width="25"></div>
+                        <div class="ln">Official booking partner of BSRTC</div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="reff">Use code FIRST to save upto  ₹250 (only for first time users) </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="section4">
+        <div class="left">
+            <div class="heading2"><h1>NOW, <strong>GET MORE THAN<br>JUST BUS</strong> TICKETS WITH<br>REDBUS!</h1></div>
+            <div class="tt">
+                <div class="lgtrain"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/rail_vertical.png?raw=true" alt="" width="50" height="28"></IMG></div>
+                <div class="tttxt">Train Tickets</div>
+            </div>
+            <hr class="styled-line">
+            <div class="abouttt">
+                <div class="normaltxt">Book IRCTC Train Tickets on redRail simple & superfast booking<br>process with no service fee + no payment gateway charge.</div>
+                <div class="bold1">
+                    <div class="img"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/1.png?raw=true" alt=""></div>
+                    <div class="boldtxt">Authorised IRCTC Partner</div>
+                </div>
+                <div class="bold2">
+                    <div class="img"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/2.png?raw=true" alt=""></div>
+                    <div class="boldtxt">Instant refunds on UPII payments</div>
+                </div>
+                <div class="bold3">
+                    <div class="img"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/3.png?raw=true" alt=""></div>
+                    <div class="boldtxt">Hassle-fre customer support</div>
+                </div>
+            </div>
+            <div class="buttontt">Book Train Tickets</div>
+        </div>
+        <div class="right"><img src="https://raw.githubusercontent.com/Dev2139/RedBus-clone/refs/heads/main/images/rail/railPop.webp" alt=""></div>
+    </div>
+    <div class="section5">
+        
+        <div class="white">
+            <div class="heading3"><h3>ENJOY THE APP!</h3></div>
+            <div class="what">
+                <div class="what1"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/tick.png?raw=true" alt="">Quick access</div>
+                <div class="what2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/tick.png?raw=true" alt="">Superior live tracking</div>
+                <div class="count">
+                    <div class="count1">
+                        <div class="rate">4.5</div>
+                        <div class="user">50M+ downloads</div>
+                        <div class="where">Play Store</div>
+                    </div>
+                    <div class="count2">
+                        <div class="rate">4.6</div>
+                        <div class="user">50M+ downloads</div>
+                        <div class="where">App Store</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scanner">
+            <div class="scantxt">Scan to<br>download</div>
+            <div class="scanimg"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/qrImage.png?raw=true" alt=""></div>
+        </div>
+        <div class="download">
+            <div class="downtxt">Download the<br>App on</div>
+            <div class="play"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/playStore.png?raw=true" alt=""></div>
+            <div class="app"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/appStore.png?raw=true" alt=""></div>
+        </div>
+    </div>
+    <div class="section6">
+        <div class="left2"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/rail/primoHomeBannerComp.png?raw=true" alt="" height="552px" style="border-radius: 30px;" ></div>
+            <div class="right2">
+                <div class="point1">
+                    <div class="pic"><img src="https://raw.githubusercontent.com/Dev2139/RedBus-clone/05ecaae44e30a37bb6c60da0371f6145f4086e8c/images/rail/clock-lines-svgrepo-com.svg" alt=""></div>
+                    <div class="txt2">
+                        <div class="dark">On time</div>
+                        <div class="light">Punctual arrivals on 95% trips</div>
+                    </div>
+                </div>
+                <div class="point1">
+                    <div class="pic"><img src="https://raw.githubusercontent.com/Dev2139/RedBus-clone/05ecaae44e30a37bb6c60da0371f6145f4086e8c/images/rail/friend-2-svgrepo-com.svg" alt=""></div>
+                    <div class="txt2">
+                        <div class="dark">Friendly Staff</div>
+                        <div class="light">Always ready to help</div>
+                    </div>
+                </div>
+                <div class="point1">
+                    <div class="pic"><img src="https://raw.githubusercontent.com/Dev2139/RedBus-clone/05ecaae44e30a37bb6c60da0371f6145f4086e8c/images/rail/star-svgrepo-com%20(1).svg" alt=""></div>
+                    <div class="txt2">
+                        <div class="dark">Top Rated</div>
+                        <div class="light">Buses with  4+ star rating</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="section7">
+        <div class="heading4">Global Presence</div>
+        <div class="contries">
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Colombia.png?raw=true" alt=""></div>
+                <div class="cname">Colombia</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/India.png?raw=true" alt=""></div>
+                <div class="cname">India</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Indonesia.png?raw=true" alt=""></div>
+                <div class="cname">Indonesia</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Malaysia.png?raw=true" alt=""></div>
+                <div class="cname">Malaysia</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Peru.png?raw=true" alt=""></div>
+                <div class="cname">Peru</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Singapore.png?raw=true" alt=""></div>
+                <div class="cname">Singapore</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Vietnam.png?raw=true" alt=""></div>
+                <div class="cname">Vietnam</div>
+            </div>
+            <div class="country1">
+                <div class="flag"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/countries/Cambodia.png?raw=true" alt=""></div>
+                <div class="cname">Cambodia</div>
+            </div>
+              
+            
+        </div>
+    </div>
+    <div class="section8">
+        <div class="heading5">BOOK BUS TICKETS ONLINE</div>
+        <div class="txt4">redBus is India's largest brand for online bus ticket booking and offers an easy-to-use online bus and train ticket booking; with <br>over 36 million satisfied customers, 3500+ bus operators to choose from, and plenty of offers on bus ticket booking, redBus<br>makes road journeys super convenient for travellers. A leading platform for booking bus tickets, redBus has been the leader<br>in online bus booking over the past 17 years across thousands of cities and lakhs of routes in India.<br><br>Booking a bus ticket online on the redBus app or website is very simple. You can download the redBus app or visit redbus.in and<br> enter your source, destination & travel date to check the top-rated bus services available. You can then compare bus prices, user<br>ratings & amenities, select your preferred seat, boarding & dropping points and pay using multiple payment options like UPI,<br>debit or credit card, net banking and more. With redBus, get assured safe & secure payment methods and guaranteed travel<br>with the best s.. <strong>Read more</strong></div>
+    </div>
+    <div class="section9">
+        <div class="heading6">Bus Booking redDeals on redBus</div>
+        <div class="txt5">Don't miss out on these incredeble offers, book your bus tickets noe and travel with convience and affordibility. Hurry, grab<br>the best bus booking deals before they're gone! </div>
+        <div class="box4">
+            <div class="logo3"><img src="https://github.com/Dev2139/RedBus-clone/blob/main/images/Tags/logo1.png?raw=true" alt="" height="50px"></div>
+            <div class="txt6">
+                <div class="heading7">Unlock Unbeatable Exclusive redDeals <div class="red">20% OFF</div></div>
+                <div class="numbers">
+                    <div class="first">
+                        <div class="red">3949</div>
+                        <div class="black">Deals</div>
+                    </div>
+                    <div class="second">
+                        <div class="red">1767</div>
+                        <div class="black">Bus Operators</div>
+                    </div>
+                    <div class="third">
+                        <div class="red">361698</div>
+                        <div class="black">Routes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="button2">Book now</div>
+        </div>
+    </div>
+    <div class="section10">
+        <div class="heading8">FAQs related to Bus Tickets Booking</div>
+        <div class="navigators">
+            <div class="general">General</div>
+            <div class="ticket">Ticket-related</div>
+            <div class="payment">Payment</div>
+            <div class="refund">Cancellation & Refund</div>
+            <div class="insurance">Insurance</div>
+        </div>
+        <div class="questions">
+            <div class="Q1">Can I track the location of my booked bus online?</div>
+            <div class="Q1">What are the advantages of Booking tickets on redBus?</div>
+            <div class="Q1">Why book bus tickets online on redBus?</div>
+            <div class="Q1">Do I need to create an account on redbus site to book my ticket online on redBus?</div>
+            <div class="Q1">Does bus booking online cost me more?</div>
+            <div class="Q1">How can I get the discounts on the bus booking?</div>
+            <div class="Q1">What's new on bus booking on redBus?</div>
+            <div class="Q1">Can I book goverment buses on redBus?</div>
+        </div>
+    </div>
+    <div class="section11">
+        <div class="footer">
+            <div class="popular"></div>
+        </div>
+    </div>
+</body>
+
+</html> 
+
+
+ 
